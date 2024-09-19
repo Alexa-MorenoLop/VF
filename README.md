@@ -60,11 +60,11 @@ Para esto, antes debemos identificar los datos de nuestro problema para facilita
 
 Valor Actual (VA)= $1000.00$
 
-Tiempo del Periodo (t)= 7 meses
+Tiempo del Periodo (t)= $7 meses$
 
-Intereses anualizados (i)= $24%$ = $0.24$
+Intereses anualizados (i)= $24% $ = $0.24$
 
-Intereses del Periodo (r)= $((24%/7)*12 meses)$ = $14%$ = $0.14$
+Intereses del Periodo (r)=$((24%/7)*12 meses)$ = $14%$ = $0.14$
 
 
 **Calculo del Valor Futuro (VF)**
@@ -81,7 +81,7 @@ VF=function(VA,r,t){
  }
 #Aquí probamos que la función sea correcta con los datos del problema proporcionado
 
-resultado =VF(VA=1000,r=0.14,t=7)
+resultado =VF(VA=1000,r=0.02,t=7)
 VF=resultado $ValorFuturo
 print(resultado$VFtexto)
 ```
@@ -102,7 +102,7 @@ VA=function(VF,r,t){
 
 #Aquí probamos que la función sea correcta con los datos del problema proporcionado
 
-resultado =VA(VF=1980,r=0.14,t=7)
+resultado =VA(VF=1140,r=0.02,t=7)
 VA=resultado $ValorActual
 print(resultado$VAtexto)
 ```
@@ -123,7 +123,7 @@ r=function(VF,VA,t){
 
 #Aquí probamos que la función sea correcta con los datos del problema proporcionado
 
-resultado =r(VF=1980,VA=1000,t=7)
+resultado =r(VF=1140,VA=1000,t=7)
 r=resultado$InteresPeriodo
 print(resultado$rtexto)
 ```
@@ -145,7 +145,7 @@ t=function(VF,VA,r){
  
 #Aquí probamos que la función sea correcta con los datos del problema proporcionado
 
-resultado= t(VF=1980,VA=1000,r=0.14)
+resultado= t(VF=1140,VA=1000,r=0.02)
 t=resultado$TiempoPeriodo
 print(resultado$TiempoPtexto)
 ```
