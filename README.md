@@ -43,13 +43,13 @@ Para la resolución de este tipo de problemas relacionados al Interés Simple, e
 
 $$VF=VA+I$$
 
-Sin embargo, al sustituir I por su equivaente se tendría:
+Sin embargo, al sustituir I por su equivalente se tendría:
 
 $$VF=VA +(VA*r)$$
 
 $$VF=VA*(1+(t*r))$$
 
-Donde *t* corresponde al periodo de tiempo de la actividad financiera y *r* es la tasa de interés del periodo. Para tener un mayor conocimiento acerca del Interés Simple es posible revisar el tema en la siguiente liga ("https://oscardelatorretorres.shinyapps.io/02matFin02ProgAritIntSimple/").
+Donde *t* corresponde al periodo de tiempo de la actividad financiera y *r* es la tasa de interés del periodo. (Para tener un mayor conocimiento acerca del Interés Simple es posible revisar el tema en la siguiente liga: ("https://oscardelatorretorres.shinyapps.io/02matFin02ProgAritIntSimple/")).
 
 Esta última será aquella que utilizaremos para nuestros cálculos en la resolución de problemas en este tema, denotandola como la *Ecuación General del Interés Simple*.
 Encontraremos el Valor Final(VF), Valor Actual (VA), Intereses del Periodo (r) así como el Tiempo del Periodo (t), en base a despejes de está ecuación y gracias las funciones que ahora somos capaces de programar se hará más sencilla esta tarea.
@@ -69,15 +69,16 @@ $InteresesAnualizados(i)$= 24% = 0.24
 $InteresesPeriodo(r)$= 2% = 0.02
 
 **Cálculo del Valor Futuro (VF)**
+Con estos datos es posible llevar a cabo los cálculos necesarios con la función
 
 ```{r}
 #Creamos objetos que serán los valores de entrada para nuestra función:
-VA=1000
-r=0.02
-t=7
+ValorActual =1000
+TasaInteresesPeriodo =0.02
+TiempoPeriodo=7
 
 #Realizamos el cálculo
-resultado =VFSimple(VA,r,t)
+resultado=VFSimple(VA=ValorActual,r=TasaInteresesPeriodo,t=TiempoPeriodo)
 
 #Se imprime el resultado
 print(resultado)
