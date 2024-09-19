@@ -40,12 +40,12 @@ return(objetoSalida)
 }
 ```
 Una vez teniendo nuestras funciones programadas, bajo esta sintaxis, y siendo funcionales en nuestro R Script, es posibles cargarlas a un repositorio en github, donde se tendrá una liga de su versión "cruda" o raw. 
-Un ejemplo de esto se encuentra al inicio del presente trabajo:
+Un ejemplo de esto sería:
 ```{r}
 https://raw.githubusercontent.com/Alexa-MorenoLop/VF/main/VF.R
 ```
 
-Al copiar esta URL y aplicando la función *source* a esta versión del archivo lograremos que sea posible acceder a las funciones contenidas en esté para cualquiera que copie y pegue esta función *source* en su workspace.
+Al copiar esta URL y aplicando la función *source* a esta versión del archivo lograremos que sea posible acceder a las funciones contenidas en esté para cualquiera que copie y pegue esta función *source* en su workspace. Así quedaría:
 ```{r}
 source("https://raw.githubusercontent.com/Alexa-MorenoLop/VF/main/VF.R")
 ```
