@@ -69,16 +69,6 @@ Intereses del Periodo (r)=$((24%/7)*12 meses)$ = $14%$ = $0.14$
 
 **Calculo del Valor Futuro (VF)**
 ```{r}
-#Se crea una función VF 
-VF=function(VA,r,t){
-  
-  VFsalida=VA*(1+(r*t))
-#Se crea un objeto de texto 
-  VFtexto=paste0("El valor futuro es: ",VFsalida)
-#Se crea una lista que contenga a ambos objetos
-  listaVF=list(ValorFuturo=VFsalida,VFtexto=VFtexto)
-  return(listaVF)
- }
 #Aquí probamos que la función sea correcta con los datos del problema proporcionado
 
 resultado =VF(VA=1000,r=0.02,t=7)
