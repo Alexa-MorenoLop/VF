@@ -73,15 +73,15 @@ Con estos datos es posible llevar a cabo los cálculos necesarios con la funció
 
 ```{r}
 #Creamos objetos que serán los valores de entrada para nuestra función:
-ValorActual =1000
-TasaInteresesPeriodo =0.02
+ValorActual=1000
+TasaInteresesPeriodo=0.02
 TiempoPeriodo=7
 
 #Realizamos el cálculo
-resultado=VFSimple(VA=ValorActual,r=TasaInteresesPeriodo,t=TiempoPeriodo)
+ValorFuturo=VFSimple(VA=ValorActual,r=TasaInteresesPeriodo,t=TiempoPeriodo)
 
 #Se imprime el resultado
-print(resultado)
+ValorFuturo
 ```
 
 **Calculo del Valor Actual (VA)**
