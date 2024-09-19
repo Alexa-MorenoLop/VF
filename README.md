@@ -5,7 +5,7 @@
 *Licenciatura en Actuaría y Ciencia de Datos*
 
 
-Es posible cargar las funciones realizadas por medio del siguiente comando.
+Es posible cargar las funciones realizadas por medio del siguiente comando pegandolo en la consola de la terminal en su workspace. 
 ```{r}
 source("https://raw.githubusercontent.com/Alexa-MorenoLop/VF/main/VF.R")
 ```
@@ -21,12 +21,14 @@ resultado=
 return(resultado)
 }
 ```
-Es importante aclarar que dentro de los parentesis que acompañan a *function* se establecerán los argumentos de entrada con los cuales va a trabajar la función.
+
+Es importante aclarar que dentro de los paréntesis que acompañan a *function* se establecerán los argumentos de entrada con los cuales va a trabajar la función.
 Respetando esta sintaxis es posible crear una gran variedad de funciones según nuestras necesidades y cálculos correspondientes.
 
-Una vez teniendo nuestras funciones programadas y funcionales en nuestro R Script, es posibles cargarlas a un repositorio en github, donde se tendrá una liga de su versión "cruda" o raw. Un ejemplo de esto se encuentra al inicio del presente trabajo:
+Una vez teniendo nuestras funciones programadas bajo esta sintaxis y siendo funcionales en nuestro R Script, es posibles cargarlas a un repositorio en github, donde se tendrá una liga de su versión "cruda" o raw. 
+Un ejemplo de esto se encuentra al inicio del presente trabajo:
 ```{r}
-https://raw.githubusercontent.com/Alexa-MorenoLop/VF/main/VF.R
+
 ```
 Utilizando la función *source* a esta versión del archivo lograremos que sea posible acceder a las funciones contenidas en esté para cualquiera que copie y pegue esta función *source* en su workspace.
 ```{r}
