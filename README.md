@@ -58,15 +58,14 @@ Encontraremos el Valor Final(VF), Valor Actual (VA), Intereses del Periodo (r) a
 
 Para esto, antes debemos identificar los datos de nuestro problema para facilitar la computación al momento de llevarlo a cabo.
 
-```
-Valor Actual (VA)= 1000.00
+Valor Actual (VA)= $1000.00$
 
 Tiempo del Periodo (t)= 7 meses
 
-Intereses anualizados (i)= 24% = 0.24
+Intereses anualizados (i)= $24%$ = $0.24$
 
-Intereses del Periodo (r)= $((24%/7)*12 meses)$ = 14% = 0.14
-```
+Intereses del Periodo (r)= $((24%/7)*12 meses)$ = $14%$ = $0.14$
+
 
 **Calculo del Valor Futuro (VF)**
 ```{r}
@@ -74,8 +73,9 @@ Intereses del Periodo (r)= $((24%/7)*12 meses)$ = 14% = 0.14
 VF=function(VA,r,t){
   
   VFsalida=VA*(1+(r*t))
-  
+#Se crea un objeto de texto 
   VFtexto=paste0("El valor futuro es: ",VFsalida)
+#Se crea una lista que contenga a ambos objetos
   listaVF=list(ValorFuturo=VFsalida,VFtexto=VFtexto)
   return(listaVF)
  }
@@ -85,3 +85,70 @@ resultado =VF(VA=1000,r=0.14,t=7)
 VF=resultado $ValorFuturo
 print(resultado$VFtexto)
 ```
+
+**Calculo del Valor Actual (VA)**
+```{r}
+#Se crea una función VA despejando VA en la ecuación general.
+
+VA=function(VF,r,t){
+  
+  VAsalida= VF/(1+(r*t))
+#Se crea un objeto de texto 
+  VAtexto=paste0("El Valor Actual es: ",VAsalida)
+#Se crea una lista que contenga a ambos objetos
+  listaVA=list(ValorActual=VAsalida,VAtexto=VAtexto)
+  return(listaVA)
+ }
+
+#Aquí probamos que la función sea correcta con los datos del problema proporcionado
+
+resultado =VA(VF=1980,r=0.14,t=7)
+VA=resultado $ValorActual
+print(resultado$VAtexto)
+```
+
+**Cálculo del Interes del Periodo (r)**
+```{r}
+#Se crea una función r despejando r en la ecuación general.
+
+r=function(VF,VA,t){
+  
+ rsalida= (((VF/VA)-1)/t)
+#Se crea un objeto de texto 
+ rtexto=paste0("El Interés del Periodo es: ",rsalida)
+#Se crea una lista que contenga a ambos objetos
+ rlista=list(InteresPeriodo=rsalida,rtexto=rtexto)
+ return(rlista)
+ }
+
+#Aquí probamos que la función sea correcta con los datos del problema proporcionado
+
+resultado =r(VF=1980,VA=1000,t=7)
+r=resultado$InteresPeriodo
+print(resultado$rtexto)
+```
+
+**Cálculo del Tiempo del Periodo (t)**
+```{r}
+
+#Se crea una función t despejando t en la ecuación general.
+
+t=function(VF,VA,r){
+  
+  tsalida= (((VF/VA)-1)/r)
+#Se crea un objeto de texto 
+  TiempoPtexto=paste0("El tiempo del periodo es: ",tsalida)
+#Se crea una lista que contenga a ambos objetos
+  tlista=list(TiempoPeriodo=tsalida,TiempoPtexto=TiempoPtexto)
+  return(tlista)
+ }
+ 
+#Aquí probamos que la función sea correcta con los datos del problema proporcionado
+
+resultado= t(VF=1980,VA=1000,r=0.14)
+t=resultado$TiempoPeriodo
+print(resultado$TiempoPtexto)
+```
+
+
+
