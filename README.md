@@ -51,13 +51,37 @@ $$VF=VA +(VA*r)$$
 
 $$VF=VA*(1+(t*r))$$
 
-Donde *t* corresponde al periodo de tiempo de la actividad financiera y *r* es la tasa de interés del periodo. (Para tener un mayor conocimiento acerca del Interés Simple es posible revisar el tema en la siguiente liga ("https://oscardelatorretorres.shinyapps.io/02matFin02ProgAritIntSimple/")).
+Donde *t* corresponde al periodo de tiempo de la actividad financiera y *r* es la tasa de interés del periodo. Para tener un mayor conocimiento acerca del Interés Simple es posible revisar el tema en la siguiente liga ("https://oscardelatorretorres.shinyapps.io/02matFin02ProgAritIntSimple/").
 
-Esta última ecuación será aquella que utilizaremos para nuestros cálculos en la resolución del problema. Enontraremos el Valor Final(VF), Valor Actual (VA), Intereses del Periodo (r) así como el Tiempo del Periodo (t), todo esto en base a las funciones que ahora somos capaces de programar.
+Esta última será aquella que utilizaremos para nuestros cálculos en la resolución de problemas en este tema, denotandola como la *Ecuación General del Interés Simple*.
+Encontraremos el Valor Final(VF), Valor Actual (VA), Intereses del Periodo (r) así como el Tiempo del Periodo (t), en base a despejes de está ecuación y gracias las funciones que ahora somos capaces de programar se hará más sencilla esta tarea.
 
-Para esto, antes debemos identificar los datos de nuestro problema para facilitar la computación al momento de llevarla a cabo.
-´´´
-Valor Actual (VA)= $1,000.00$
+Para esto, antes debemos identificar los datos de nuestro problema para facilitar la computación al momento de llevarlo a cabo.
+
+```
+Valor Actual (VA)= 1000.00
+
 Tiempo del Periodo (t)= 7 meses
 
+Intereses anualizados (i)= 24% = 0.24
+
+Intereses del Periodo (r)= $((24%/7)*12 meses)$ = 14% = 0.14
+```
+
 **Calculo del Valor Futuro (VF)**
+```{r}
+#Se crea una función VF 
+VF=function(VA,r,t){
+  
+  VFsalida=VA*(1+(r*t))
+  
+  VFtexto=paste0("El valor futuro es: ",VFsalida)
+  listaVF=list(ValorFuturo=VFsalida,VFtexto=VFtexto)
+  return(listaVF)
+ }
+#Aquí probamos que la función sea correcta con los datos del problema proporcionado
+
+resultado =VF(VA=1000,r=0.14,t=7)
+VF=resultado $ValorFuturo
+print(resultado$VFtexto)
+```
