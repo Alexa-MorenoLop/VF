@@ -32,10 +32,13 @@ Un ejemplo:
 #Creamos nuestra función con la sintaxis ya conocida.
 VF=function(VA,r,t){
  xsalida=VA*(1+(r*t))
+
  #Creamos una cadena de texto con el resultado.
  textoSalida=paste0("El valor futuro es:",xsalida)
+
  #Creamos una lista de objetos, funcional para extraer varios objetos a la vez.
  objetoSalida=list(valorFuturo=xsalida,textoSalida=textoSalida)
+
 return(objetoSalida)
 }
 ```
@@ -91,9 +94,12 @@ Utilizando la Ecuación General del Interés simple $VF=((VA*(1+(t*r)))$ podemos
 
 ```{r}
 #Probamos que la función sea correcta con los datos del problema proporcionado.
+
  # Proporcionamos los valores de entrada con los cuales trabajará la función dentro de los paréntesis.
   resultado =VFSimple(VA=1000,r=0.02,t=7)
+
   VFSimple= resultado$ValorFuturoSimple
+
  #Imprimimos nuestro resultado.
   print(resultado$VFSimpleTexto)
 ```
@@ -104,9 +110,12 @@ Considerando que se ha despejado VA en la ecuación general se puede calcular:
 
 ```{r}
 #Probamos que la función sea correcta con los datos del problema proporcionado.
+
  # Proporcionamos los valores de entrada con los cuales trabajará la función dentro de los paréntesis.
   resultado =VA(VF=1140,r=0.02,t=7)
+
   VA=resultado $ValorActual
+
  #Imprimimos nuestro resultado.
   print(resultado$VAtexto)
 ```
@@ -117,9 +126,12 @@ De igual forma, tomemos el despeje de r en la ecuación general logrando obtener
 
 ```{r}
 #Probamos que la función sea correcta con los datos del problema proporcionado.
+
  #Proporcionamos los valores de entrada con los cuales trabajará la función dentro de los paréntesis.
   resultado =r(VF=1140,VA=1000,t=7)
+
   r=resultado$InteresPeriodo
+
  #Imprimimos nuestro resultado.
   print(resultado$rtexto)
 ```
@@ -130,12 +142,15 @@ Por último, para cálcular t se sigue el mismo procedimiento a la hora del desp
 
 ```{r}
 #Probamos que la función sea correcta con los datos del problema proporcionado.
+
  #Proporcionamos los valores de entrada con los cuales trabajará la función dentro de los paréntesis.
   resultado= t(VF=1140,VA=1000,r=0.02)
+
   t=resultado$TiempoPeriodo
+
  #Imprimimos nuestro resultado.
   print(resultado$TiempoPtexto)
 ```
-
+Como conclusión se puede apreciar una de la múltiples herramientas que brinda la programación en R, como lo son las funciones, las cuales al momento de llevar a cabo cálculos en temas de nuestra conveniencia, como lo es el Interés Simple, son funcionales y de gran útilidad.
 
 
