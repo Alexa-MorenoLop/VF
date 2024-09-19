@@ -71,9 +71,10 @@ Intereses del Periodo (r)=$((24%/7)*12 meses)$ = $14%$ = $0.14$
 ```{r}
 #Aquí probamos que la función sea correcta con los datos del problema proporcionado
 
-resultado =VF(VA=1000,r=0.02,t=7)
-VF=resultado $ValorFuturo
-print(resultado$VFtexto)
+resultado =VFSimple(VA=1000,r=0.02,t=7)
+VFSimple=resultado $ValorFuturoSimple
+print(resultado$VFSimpleTexto)
+
 ```
 
 **Calculo del Valor Actual (VA)**
