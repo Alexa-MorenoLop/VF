@@ -13,7 +13,7 @@ source("https://raw.githubusercontent.com/Alexa-MorenoLop/VF/main/VF.R")
 # Funciones en R
 Para crear una función en nuestro documento R Script se sigue la sintaxis:
 
-```{r}
+```
 Nombre_función = function( ){
 cuerpo de la función
 
@@ -37,7 +37,7 @@ En nuestro caso, las funciones elaboradas de esta forma serán respecto al tema 
 
 # Ejercicio de Interés Simple
 
-Se nos proporciona un problema a resolver:
+Se nos proporciona el siguiente problema a resolver:
 
 "José Ignacio presta $1,000.00 a una tasa de interés simple del 24% durante 7 meses. Utilizando el año año natural, diga Usted el Monto que recibirá al final del préstamo."
 
@@ -55,4 +55,9 @@ Donde *t* corresponde al periodo de tiempo de la actividad financiera y *r* es l
 
 Esta última ecuación será aquella que utilizaremos para nuestros cálculos en la resolución del problema. Enontraremos el Valor Final(VF), Valor Actual (VA), Intereses del Periodo (r) así como el Tiempo del Periodo (t), todo esto en base a las funciones que ahora somos capaces de programar.
 
-*
+Para esto, antes debemos identificar los datos de nuestro problema para facilitar la computación al momento de llevarla a cabo.
+´´´
+Valor Actual (VA)= $1,000.00$
+Tiempo del Periodo (t)= 7 meses
+
+**Calculo del Valor Futuro (VF)**
