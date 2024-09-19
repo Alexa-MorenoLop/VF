@@ -72,9 +72,9 @@ $InteresesPeriodo(r)$= 2% = 0.02
 Con estos datos es posible llevar a cabo los cálculos necesarios con la función
 
 ```{r}
-#resultado =VFSimple(VA=1000,r=0.02,t=7)
-#VFSimple=resultado $ValorFuturoSimple
-#print(resultado$VFSimpleTexto)
+resultado =VFSimple(VA=1000,r=0.02,t=7)
+VFSimple=resultado $ValorFuturoSimple
+print(resultado$VFSimpleTexto)
 ```
 
 **Calculo del Valor Actual (VA)**
